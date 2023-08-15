@@ -1,0 +1,24 @@
+{
+  "default": {
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "paths" : [
+      "knab-qa/features/**/*.feature"
+    ],
+    "requireModule" : [
+      "ts-node/register"
+    ],
+    "require": [
+      "knab-qa/step-definitions/*Steps.ts*",
+      "knab-qa/utils/Hooks.ts"
+    ],
+    "format" : [
+      "progress-bar",
+      "html:test-reports/cucumberReport.html",
+      "json:test-reports/cucumberReport.json",
+      "rerun:@rerun.txt"
+    ],
+    "parallel" : 2
+  }
+}
