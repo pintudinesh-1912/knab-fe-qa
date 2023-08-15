@@ -1,0 +1,12 @@
+node_modules/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/packages/*/.tsBuild/
+/packages/*/playwright-report/
+/packages/*/allure-report/
+/packages/*/allure-results/
+/.idea/
+/package-lock.json
+/yarn.lock
+/test-reports/
