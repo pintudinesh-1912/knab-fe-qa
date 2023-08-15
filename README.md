@@ -9,7 +9,7 @@ Website for reference: https://trello.com/login
 - Makes use of BDD and POM
 - Coding is done in Typescript
 - HTML reports are generated
-- CI/CD pipelines are configured
+- CI/CD pipelines are configured for every change being pushed to main/master
 - Parallel execution enabled for 2 instances
 
 
