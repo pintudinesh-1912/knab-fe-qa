@@ -8,7 +8,7 @@ let browser : Browser
 let context : BrowserContext
 
 const options  = {
-    headless : true,
+    headless : false,
     slowMo : 700
 };
 

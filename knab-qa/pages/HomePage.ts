@@ -26,25 +26,22 @@ export class HomePage {
         this.boardName = ""
     }
 
-    async initializeBoardCreation() {
+    async createBoardWithRandomData() {
         await this.boardsTab.click()
         await this.createBoardTile.click()
-    }
-
-    async finalizeBoardCreation(accessLevel: string) {
         this.boardName = faker.random.words(2)
         await this.boardNameTextBox.click({force:true})
         await this.boardNameTextBox.fill(this.boardName)
-        switch (accessLevel) {
-            case "Workspace:":
-                break
-            case "Private":
-                break
-        }
         await this.createBoardSubmitButton.click()
     }
 
     async verifySuccessfulBoardCreation() {
         await expect(await this.page.getByText(this.boardName)).toBeVisible()
+    }
+
+    async createBoardWithEmptyName() {
+        await this.boardsTab.click()
+        await this.createBoardTile.click()
+        await this.boardNameTextBox.click({force:true})
     }
 }

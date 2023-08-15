@@ -6,12 +6,10 @@ Feature: Creation of board
     When  User performs the login operation successfully
     Then  Verify that the user has logged in successfully
 
-  Scenario Outline: Verify that user can create a board
-    When User clicks on create board button
-    When User selects visibility as "<Visibility>"
+  Scenario: Verify that user can create a board
+    When User creates a board with random data
     Then Verify that board is created successfully for the user
-    Examples:
-      | Visibility |
-      | Private    |
-#      | Workspace  |
-#      | Public     |
+
+  Scenario: Verify that user is not allowed to create a board if no name is provided
+    When User creates a board with empty name
+    Then Verify that the create button remains disabled

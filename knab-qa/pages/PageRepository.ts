@@ -1,6 +1,5 @@
 import {Page} from "@playwright/test";
 import {LoginPage} from "./LoginPage";
-import {pageFixture} from "../utils/PageFixture";
 import {HomePage} from "./HomePage";
 
 
