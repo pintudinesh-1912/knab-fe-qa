@@ -8,7 +8,6 @@ let pageRepository :PageRepository
 Given("User navigates to the login page", async function () {
     pageRepository = new PageRepository(pageFixture.page)
     await pageFixture.page.goto("https://trello.com/login")
-
 })
 
 When("User performs the login operation successfully", async function() {
